@@ -22,18 +22,6 @@ type Query {
   posts: [Post]
   author(id: Int!): Author
 }
-
-# this schema allows the following mutation:
-type Mutation {
-  upvotePost (
-    postId: Int!
-  ): Post
-}
-
-type Subscription {
-  postUpvoted: Post
-}
-
 `;
 
 export default makeExecutableSchema({
